@@ -1,0 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Emotion Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🤖 AI-Based Emotion Detection</h1>
+            <p>Detect emotions from Text and Voice</p>
+        </header>
+
+        <div class="main-card">
+
+            <!-- Text Section -->
+            <section class="input-section">
+
+                <h2>📝 Text Emotion Detection</h2>
+
+                <textarea
+                    id="textInput"
+                    placeholder="Type your feelings here...
+Example: I am very happy today!"
+                ></textarea>
+
+                <button onclick="analyzeText()">
+                    🔍 Analyze Emotion
+                </button>
+
+                <button class="clear-btn" onclick="clearText()">
+                    Clear
+                </button>
+
+            </section>
+
+
+            <!-- Voice Section -->
+            <section class="voice-section">
+
+                <h2>🎤 Voice Emotion Detection</h2>
+
+                <p id="voiceStatus">
+                    Click the button and speak
+                </p>
+
+                <button id="voiceButton" onclick="startVoiceRecognition()">
+                    🎤 Start Voice
+                </button>
+
+                <p id="voiceText"></p>
+
+            </section>
+
+
+            <!-- Result Section -->
+            <section class="result-section">
+
+                <h2>Emotion Result</h2>
+
+                <div id="emotionIcon" class="emotion-icon">
+                    😊
+                </div>
+
+                <h3 id="emotionResult">
+                    Your emotion will appear here
+                </h3>
+
+                <p id="emotionMessage">
+                    Enter text or use your voice to detect emotion.
+                </p>
+
+                <div class="confidence-box">
+
+                    <p>Confidence</p>
+
+                    <div class="progress">
+                        <div id="confidenceBar"></div>
+                    </div>
+
+                    <span id="confidence">
+                        0%
+                    </span>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- Examples -->
+
+        <div class="examples">
+
+            <h2>Try Examples</h2>
+
+            <button onclick="useExample('I am very happy and excited today!')">
+                😊 Happy
+            </button>
+
+            <button onclick="useExample('I feel very sad and lonely.')">
+                😢 Sad
+            </button>
+
+            <button onclick="useExample('I am very angry and frustrated.')">
+                😡 Angry
+            </button>
+
+            <button onclick="useExample('I am scared and worried about this.')">
+                😨 Fear
+            </button>
+
+            <button onclick="useExample('Today is a normal day.')">
+                😐 Neutral
+            </button>
+
+        </div>
+
+        <footer>
+            <p>AI-Based Emotion Detection System | Mini Project</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
